@@ -18,6 +18,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
 
   return(
     <>
+      <br />
       <ButtonGroup onClick={changeNumProd}>
         <Button variant="secondary" value="substract">-</Button>
         <h4>&nbsp; {numProd} &nbsp;</h4>
