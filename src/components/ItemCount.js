@@ -7,7 +7,6 @@ const ItemCount = ({stock, initial, onAdd}) => {
   const [numProd, setNumProd] = useState(initial);
 
   const changeNumProd = (e) => {
-    debugger
     console.log(e.target.value);
     if (e.target.value === "substract" && numProd > 0) {
       setNumProd(numProd-1);

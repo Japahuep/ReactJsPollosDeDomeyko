@@ -1,6 +1,7 @@
 import Card from 'react-bootstrap/Card';
 
-const Item = ({pictureUrl, title, description}) => {
+const Item = ({props}) => {
+  const {pictureUrl, title, description} = props
   return(
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={pictureUrl} />
