@@ -7,7 +7,6 @@ const ItemCount = ({stock, initial, onAdd}) => {
   const [numProd, setNumProd] = useState(initial);
 
   const changeNumProd = (e) => {
-    console.log(e.target.value);
     if (e.target.value === "substract" && numProd > 0) {
       setNumProd(numProd-1);
     } else if (e.target.value === "add" && numProd < stock) {
@@ -16,7 +15,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
   }
 
   return(
-    <>
+    <div>
       <br />
       <ButtonGroup onClick={changeNumProd}>
         <Button variant="secondary" value="substract">-</Button>
@@ -26,7 +25,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
       <br />
       <br />
       <Button variant="primary" value="onAdd" onClick={() => onAdd(numProd)}>Agregar</Button>
-    </>
+    </div>
   );
 }
 
