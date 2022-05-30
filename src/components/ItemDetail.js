@@ -1,4 +1,5 @@
 import Card from 'react-bootstrap/Card';
+import { ListGroup, ListGroupItem } from 'react-bootstrap';
 
 const ItemDetail = ({item}) => {
   const {pictureUrl, title, price, description} = item
@@ -9,7 +10,7 @@ const ItemDetail = ({item}) => {
         <Card.Img variant="top" src={pictureUrl} />
         <Card.Body>
           <Card.Title>{`$${price}`}</Card.Title>
-          <Card.Text>{description}</Card.Text>
+          <ListGroup variant='flush'>{description.map(product => <ListGroupItem key={product}>• {product}</ListGroupItem>)}</ListGroup>
         </Card.Body>
       </Card>
     </div>

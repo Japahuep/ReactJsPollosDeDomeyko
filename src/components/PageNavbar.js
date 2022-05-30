@@ -1,24 +1,22 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Container, Navbar, Nav, NavDropdown} from 'react-bootstrap';
+import {Container, Navbar, Nav} from 'react-bootstrap';
+import LinkContainer from 'react-router-bootstrap/LinkContainer';
+import { NavLink } from 'react-router-dom';
 import CartWidget from './CartWidget';
 
-const PageNavbar = (chart) => {
+const PageNavbar = () => {
   return (
     <>
     <Container>
       <Navbar bg="./index.html" expand="lg">
-        <Navbar.Brand href="#home"><img src="./chickenLogo250.png" className='navbarLogo' alt='Logo Pollos'/></Navbar.Brand>
+        <Navbar.Brand href="#home"><LinkContainer to="/"><img src="https://github.com/Japahuep/finalProject/blob/main/media/images/circle-icon.png?raw=true" className='navbarLogo' alt='Logo Pollos'/></LinkContainer></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">MENÚ</Nav.Link>
-            <Nav.Link href="#link">PROMOCIONES</Nav.Link>
-            <NavDropdown title="LOCALES" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Puente Alto</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">San Bernando</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Santiago</NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link href="#link">QUIÉNES SOMOS</Nav.Link>
+            <Nav.Link as={NavLink} to={"/category/chicken"}>Pollos Asados</Nav.Link>
+            <Nav.Link as={NavLink} to={"/category/as"}>As</Nav.Link>
+            <Nav.Link as={NavLink} to={"/category/fried"}>Fritangas</Nav.Link>
+            <Nav.Link as={NavLink} to={"/category/burger"}>Hamburguesas</Nav.Link>
           </Nav>
         </Navbar.Collapse>
         <Navbar.Collapse className="justify-content-end">
