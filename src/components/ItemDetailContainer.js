@@ -14,7 +14,7 @@ const ItemDetailContainer = () => {
     customFetch(products.find(item=> item.id === parseInt(id)), 500)
       .then(resp => setData(resp))
       .catch(err => alert(err));
-  }, [])
+  }, [id])
 
   return(
     <div className="App">
