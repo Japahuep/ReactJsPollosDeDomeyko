@@ -24,7 +24,7 @@ const CartContextProvider = ({children}) => {
   }
 
   const removeItem = (id) => {
-    let notRemove = cartList.filter(item => item.id != id)
+    let notRemove = cartList.filter(item => item.id !== id)
     setCartList(notRemove);
   }
 

@@ -13,7 +13,7 @@ const ItemListContainer = () => {
     customFetch(products.filter(item => title !== undefined ? (item.category.title === title) : item), 800)
       .then(result => setData(result))
       .catch(err => alert(err));
-  }, [data])
+  }, [title])
   
   return (
     <>
