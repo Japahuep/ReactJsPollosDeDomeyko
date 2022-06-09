@@ -20,9 +20,9 @@ const PageNavbar = () => {
           </Nav>
         </Navbar.Collapse>
         <Navbar.Collapse className="justify-content-end">
-          <Navbar.Text>
+          <Nav.Link as={NavLink} to={"/cart"}>
             <CartWidget />
-          </Navbar.Text>
+          </Nav.Link>
         </Navbar.Collapse>
       </Navbar>
     </Container>

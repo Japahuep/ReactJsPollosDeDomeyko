@@ -3,7 +3,7 @@ import ItemList from "./ItemList";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-const { products } = require("../utils/products").default;
+const { products } = require("../utils/products");
 
 const ItemListContainer = () => {
   const [ data, setData ] = useState([]);
@@ -13,7 +13,7 @@ const ItemListContainer = () => {
     customFetch(products.filter(item => title !== undefined ? (item.category.title === title) : item), 800)
       .then(result => setData(result))
       .catch(err => alert(err));
-  }, [title])
+  }, [data])
   
   return (
     <>

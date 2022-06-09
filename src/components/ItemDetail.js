@@ -1,18 +1,22 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import LinkContainer from 'react-router-bootstrap/LinkContainer';
 import Card from 'react-bootstrap/Card';
 import { ListGroup, ListGroupItem } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import ItemCount from "./ItemCount";
+import { CartContext } from "./CartContext"
 
 const ItemDetail = ({item}) => {
   const {pictureUrl, title, price, description, stock} = item
 
   const [itemCountAux, setItemCountAux] = useState(0);
 
+  const cartContext = useContext(CartContext);
+
   const onAdd = (qty) => {
-    if (qty > 0) alert(`Has agregado ${qty} productos.`);
+    qty > 0 && alert(`Has agregado ${qty} productos.`);
     setItemCountAux(qty);
+    cartContext.addToCart(item, qty);
   }
 
   return(
