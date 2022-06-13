@@ -14,7 +14,7 @@ const Item = ({props}) => {
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <ListGroup variant='flush'>{description.map(product => <ListGroupItem key={product}>• {product}</ListGroupItem>)}</ListGroup>
-          <LinkContainer to={`/item/${id}`}><Button variant="outline-secondary">Información</Button></LinkContainer>
+          <LinkContainer to={`/item/${id}`}><Button variant="outline-secondary">Detalle</Button></LinkContainer>
         </Card.Body>
       </Card>
     </Col>

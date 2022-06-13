@@ -28,10 +28,27 @@ const CartContextProvider = ({children}) => {
     setCartList(notRemove);
   }
 
+  const itemTotalCost = (id) => {
+    let item = cartList.find(item => item.id === id)
+    return item.price * item.qty;
+  }
+
+  const subtotalCost = () => {
+    let subtotal = cartList.reduce((acc, item) => acc + itemTotalCost(item.id), 0);
+    return subtotal
+  }
+
+  const itemTotalQty = () => {
+    let qtyTotal = cartList.reduce((acc, item) => acc + item.qty, 0);
+    return qtyTotal
+  }
+
   return (
-    <CartContext.Provider value={{cartList, addToCart, clear, removeItem}}>
-      {children}
-    </CartContext.Provider>
+    <>
+      <CartContext.Provider value={{cartList, addToCart, clear, removeItem, itemTotalCost, subtotalCost, itemTotalQty}}>
+        {children}
+      </CartContext.Provider>
+    </>
   )
 }
 
