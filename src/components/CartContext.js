@@ -6,16 +6,18 @@ const CartContextProvider = ({children}) => {
   const [cartList, setCartList] = useState([]);
 
   const addToCart = (item, qty) => {
-    let index = cartList.findIndex(cartItem => cartItem === item);
-
-    if (index === -1) {
+    let itemFound = cartList.find(cartItem => cartItem.id === item.id);
+    if (itemFound === undefined) {
       item.qty = qty
       setCartList([
         ...cartList,
         item
-      ])
+      ]);
     } else {
-      cartList[index].qty += qty;
+      itemFound.qty += qty;
+      setCartList([
+        ...cartList
+      ]);
     }
   }
 

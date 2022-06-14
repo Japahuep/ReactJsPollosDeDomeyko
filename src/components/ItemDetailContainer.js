@@ -1,16 +1,15 @@
 import { useState, useEffect } from "react";
-import customFetch from "../utils/customFetch";
+import {firestoreItemFetch} from "../utils/firestoreFetch";
 import ItemDetail from "./ItemDetail";
 import Spinner from 'react-bootstrap/Spinner';
 import { useParams } from "react-router-dom";
-const { products } = require("../utils/products");
 
 const ItemDetailContainer = () => {
   const [data, setData ] = useState({});
   const {id} = useParams();
 
   useEffect(() => {
-    customFetch(products.find(item=> item.id === parseInt(id)), 500)
+    firestoreItemFetch(id)
       .then(resp => setData(resp))
       .catch(err => alert(err));
   }, [id])
