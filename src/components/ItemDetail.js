@@ -27,6 +27,7 @@ const ItemDetail = ({item}) => {
         <Card.Body>
           <Card.Title>{`$${price}`}</Card.Title>
           <ListGroup variant='flush'>{description.map(product => <ListGroupItem key={product}>• {product}</ListGroupItem>)}</ListGroup>
+          <Card.Title>{`Stock: ${stock}`}</Card.Title>
         </Card.Body>
       </Card>
       {
