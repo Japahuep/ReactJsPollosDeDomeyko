@@ -60,7 +60,7 @@ const Cart = () => {
               <li>IVA: ${0.19*subtotalCost()}</li>
               <li>Total: ${1.19*subtotalCost()}</li>
             </ul>
-            <button onClick={sendOrder}>BUTON</button>
+            <Button variant="primary" onClick={sendOrder}>Comprar</Button>
           </div>
           <hr />
           <Row xs='auto' md={4} className="g-4"> {cartList.map(item =>
