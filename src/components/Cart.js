@@ -34,7 +34,7 @@ const Cart = () => {
       return orderCollection;
     }
     sendToFirestore()
-    .then(result => alert(`Tu pedido ${result.id} ha sido enviado`))
+    .then(result => alert(`Tu pedido ID: ${result.id} ha sido enviado`))
     .catch(err => console.log(err));
     cartList.forEach(async (item) => {
       const itemRef = doc(db, "products", item.id);
