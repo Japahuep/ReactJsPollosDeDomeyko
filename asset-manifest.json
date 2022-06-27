@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/ReactJsPollosDeDomeyko/static/css/main.347e60d8.css",
-    "main.js": "/ReactJsPollosDeDomeyko/static/js/main.734b7b47.js",
+    "main.js": "/ReactJsPollosDeDomeyko/static/js/main.ce946900.js",
     "index.html": "/ReactJsPollosDeDomeyko/index.html",
     "main.347e60d8.css.map": "/ReactJsPollosDeDomeyko/static/css/main.347e60d8.css.map",
-    "main.734b7b47.js.map": "/ReactJsPollosDeDomeyko/static/js/main.734b7b47.js.map"
+    "main.ce946900.js.map": "/ReactJsPollosDeDomeyko/static/js/main.ce946900.js.map"
   },
   "entrypoints": [
     "static/css/main.347e60d8.css",
-    "static/js/main.734b7b47.js"
+    "static/js/main.ce946900.js"
   ]
 }
