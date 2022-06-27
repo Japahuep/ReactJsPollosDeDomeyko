@@ -1,3 +1,7 @@
+# Pollos de Domeyko
+
+Simulación de E-commerce de local de pollos asados 🍗. Permite la "compra" de promociones mediante _carro de compras_ 🛒.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
