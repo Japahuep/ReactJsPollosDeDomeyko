@@ -26,7 +26,7 @@ Simulación de E-commerce de local de pollos asados 🍗. Permite la "compra" de
 
 - - - -
 
-#### Este proyecto fue realizado con la librería ***React*** de ***JavaScript***, a continuación el contenido del documento README original al inicializar la aplicación con *npx create-react-app my-app* ####
+#### Este proyecto fue realizado con la librería ***React*** de ***JavaScript***, a continuación el contenido del documento README original al inicializar la aplicación con *npx create-react-app pollos-de-domeyko* ####
 
 ## Getting Started with Create React App ##
 
